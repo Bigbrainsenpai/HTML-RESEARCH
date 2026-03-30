@@ -1,0 +1,1013 @@
+/* ============================================================
+   FilipinoCuisine.com — style.css
+   ============================================================ */
+
+/* ── RESET & BASE ─────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    color: #222222;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ── CSS VARIABLES ────────────────────────────────────────── */
+:root {
+    --bg: #f5f5f5;
+    --bg-white: #ffffff;
+    --text: #222222;
+    --text-muted: #555555;
+    --accent: #8B5E3C;
+    --accent-dark: #6e4a2d;
+    --border-light: #e0e0e0;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.07);
+    --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.18);
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --max-width: 1100px;
+    --transition: 0.3s ease;
+}
+
+/* ── LAYOUT HELPERS ───────────────────────────────────────── */
+.section-container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ── HEADER / NAV ─────────────────────────────────────────── */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--bg-white);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+}
+
+.nav-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--text);
+    transition: color var(--transition);
+    flex-shrink: 0;
+}
+
+.nav-logo:hover {
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    position: relative;
+    padding-bottom: 3px;
+    transition: color var(--transition);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent);
+    transition: width var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--accent);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* ── HERO SECTION (homepage) ──────────────────────────────── */
+.hero {
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url('bakbrowney.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.hero-title-box {
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    padding: 1.5rem 2rem;
+    background-color: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(2px);
+}
+
+.hero-title {
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 0.22em;
+    color: rgba(255, 255, 255, 0.88);
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: var(--accent);
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    border-radius: var(--radius-sm);
+    transition: background-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.hero-btn:hover {
+    background-color: var(--accent-dark);
+    transform: scale(1.04);
+    box-shadow: var(--shadow-md);
+}
+
+/* ── HERO SECTION (category pages) ───────────────────────── */
+.hero2 {
+    position: relative;
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4a3728;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.hero-content2 {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 3rem 2rem;
+}
+
+/* ── AD BANNER ────────────────────────────────────────────── */
+/* ── REFINED AD BANNER ────────────────────────────────────── */
+.ad-banner-wrapper {
+    width: 100%;
+    padding: 12px 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.ad-banner {
+    width: 100%;
+    max-width: var(--max-width);
+    background: #1a1a1a; 
+    border-radius: var(--radius-md);
+    padding: 24px 32px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.ad-label-top {
+    position: absolute;
+    top: 10px;
+    right: 24px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.ad-content-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.ad-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    z-index: 1;
+}
+
+.ad-icon-container {
+    background-color: #332822; 
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.ad-text-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.ad-headline {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.ad-subtext {
+    font-size: 0.78rem;
+    color: #aaaaaa;
+}
+
+.ad-promo-section {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-left: auto;
+}
+
+.ad-promo-badge {
+    text-align: center;
+}
+
+.ad-promo-main {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #a67c52; 
+    line-height: 1;
+}
+
+.ad-promo-sub {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: #888;
+    letter-spacing: 0.05em;
+    margin-top: 4px;
+}
+
+.ad-vertical-divider {
+    width: 1px;
+    height: 44px;
+    background-color: #333;
+}
+
+.ad-cta {
+    background-color: var(--accent);
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+.ad-cta:hover {
+    background-color: var(--accent-dark);
+    transform: translateY(-2px);
+}
+
+/* Add this to your Media Queries at the bottom of your file */
+@media (max-width: 768px) {
+    .ad-content-area {
+        flex-direction: column;
+        text-align: center;
+    }
+    .ad-promo-section {
+        margin: 15px 0 5px;
+        width: 100%;
+        justify-content: center;
+    }
+    .ad-vertical-divider { display: none; }
+}
+/* Decorative glow accents */
+.ad-banner::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: 120px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(192, 57, 43, 0.25) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.ad-banner::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 80px;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(139, 94, 60, 0.22) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.ad-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #888;
+    position: absolute;
+    top: 6px;
+    right: 12px;
+}
+
+.ad-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    z-index: 1;
+}
+
+.ad-icon {
+    font-size: 2.2rem;
+    line-height: 1;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+}
+
+.ad-text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.ad-headline {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+}
+
+.ad-subtext {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: #aaaaaa;
+    letter-spacing: 0.02em;
+}
+
+.ad-cta {
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--accent);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
+    transition: background-color var(--transition), transform var(--transition);
+    box-shadow: 0 2px 10px rgba(139, 94, 60, 0.4);
+}
+
+.ad-cta:hover {
+    background-color: var(--accent-dark);
+    transform: translateY(-1px);
+}
+
+
+
+.ad-promo-badge {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ad-promo-main {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--accent);
+    line-height: 1;
+}
+
+.ad-promo-sub {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: #aaa;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* ── RECIPES SECTION ──────────────────────────────────────── */
+.recipes-section {
+    padding: 5rem 0;
+    background-color: var(--bg);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--text);
+    line-height: 1.1;
+}
+
+.section-tagline {
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 0.18em;
+    text-transform: lowercase;
+    color: var(--text-muted);
+    margin-top: 0.4rem;
+}
+
+/* ── RECIPES GRID ─────────────────────────────────────────── */
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.home-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* ── RECIPE CARD ──────────────────────────────────────────── */
+.recipe-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.recipe-card {
+    background-color: var(--bg-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    transition: transform var(--transition), box-shadow var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.recipe-card:active {
+    transform: scale(0.97);
+}
+
+.card-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    background-color: #d4d4d4;
+}
+
+.card-image[src=""],
+.card-image:not([src]) {
+    background-color: #d4d4d4;
+}
+
+.card-body {
+    padding: 1.75rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 1;
+}
+
+.card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 0.01em;
+}
+
+.card-description {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+}
+
+.card-details {
+    display: flex;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+    flex-wrap: wrap;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.detail-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+}
+
+.detail-value {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.list-heading {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-top: 0.5rem;
+}
+
+.ingredient-list {
+    list-style: disc;
+    padding-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.ingredient-list li {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.steps-list {
+    list-style: decimal;
+    padding-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.steps-list li {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    padding-left: 0.3rem;
+}
+
+/* ── PLACEHOLDER / EMPTY STATE ────────────────────────────── */
+.placeholder-text {
+    font-size: 0.8rem;
+    color: #aaaaaa;
+    font-style: italic;
+}
+
+/* ── YOUTUBE EMBED ────────────────────────────────────────── */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--radius-sm);
+    background-color: #000;
+    margin-top: 0.5rem;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-placeholder {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: #e8e8e8;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.4rem;
+    color: #aaaaaa;
+    font-size: 0.78rem;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+.video-placeholder svg {
+    opacity: 0.4;
+}
+
+/* ── PRINT / PDF BUTTONS ──────────────────────────────────── */
+.recipe-actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-light);
+}
+
+.print-btn,
+.pdf-btn {
+    padding: 0.5rem 1.1rem;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.03em;
+    transition: background-color var(--transition), transform var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.print-btn {
+    background-color: var(--accent);
+    color: white;
+}
+
+.print-btn:hover {
+    background-color: var(--accent-dark);
+    transform: scale(1.03);
+}
+
+.pdf-btn {
+    background-color: #3a3a3a;
+    color: white;
+}
+
+.pdf-btn:hover {
+    background-color: #111111;
+    transform: scale(1.03);
+}
+
+/* ── ABOUT SECTION ────────────────────────────────────────── */
+.about-section {
+    padding: 5rem 0;
+    background-color: var(--bg-white);
+}
+
+.about-title {
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--text);
+    margin-bottom: 2rem;
+}
+
+.about-body {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about-heading-text {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.about-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+/* ── FOOTER ───────────────────────────────────────────────── */
+.site-footer {
+    background-color: #222222;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ============================================================
+   RESPONSIVE — TABLET  (max 900px)
+   ============================================================ */
+@media (max-width: 900px) {
+    .recipes-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    .hero { min-height: 420px; }
+    .hero-content { padding: 3rem 1.5rem; }
+    .card-body { padding: 1.5rem; }
+    .recipes-section,
+    .about-section { padding: 4rem 0; }
+    .nav-links { gap: 1rem; }
+    .ad-banner { padding: 16px 24px; }
+    .ad-headline { font-size: 0.92rem; }
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE  (max 600px)
+   ============================================================ */
+@media (max-width: 600px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+    .nav-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        justify-content: center;
+    }
+    .hero { min-height: 380px; }
+    .hero-content {
+        padding: 2.5rem 1.25rem;
+        align-items: center;
+        text-align: center;
+    }
+    .hero-title-box {
+        width: 100%;
+        text-align: center;
+    }
+    .hero-btn {
+        width: 100%;
+        text-align: center;
+    }
+    .recipes-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .section-container { padding: 0 1.25rem; }
+    .recipes-section,
+    .about-section { padding: 3rem 0; }
+    .section-title { font-size: 2rem; }
+    .card-image { height: 200px; }
+    .card-body { padding: 1.25rem; }
+    .about-body {
+        text-align: center;
+        padding: 0 0.5rem;
+    }
+    /* Ad banner mobile */
+    .ad-banner-wrapper { padding: 10px 1rem; }
+    .ad-banner { padding: 14px 18px; min-height: unset; }
+    .ad-divider,
+    .ad-promo-badge { display: none; }
+    .ad-headline { font-size: 0.85rem; }
+    .ad-subtext { font-size: 0.72rem; }
+    .ad-icon { font-size: 1.6rem; }
+}
+
+/* ============================================================
+   PRINT STYLES
+   ============================================================ */
+@media print {
+    body * { visibility: hidden; }
+    .printing-card,
+    .printing-card * { visibility: visible; }
+    .printing-card {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 2rem;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .recipe-actions,
+    .video-wrapper,
+    .video-placeholder { display: none !important; }
+    .card-image {
+        max-height: 300px;
+        width: auto;
+        object-fit: contain;
+    }
+}
+/* -- Meats Page Styles -- */
+.hero2 { background-image: url('your-meats-hero.jpg'); }
+
+/* -- Category Navigation Bar -- */
+.category-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    border-bottom: 2px solid #f0f0f0;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.cat-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #555;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.cat-nav-link:hover {
+    background: #fafafa;
+}
+.cat-nav-link.chicken:hover, .cat-nav-link.chicken.active { color: #c0392b; border-bottom-color: #c0392b; }
+.cat-nav-link.pork:hover,    .cat-nav-link.pork.active    { color: #e67e22; border-bottom-color: #e67e22; }
+.cat-nav-link.beef:hover,    .cat-nav-link.beef.active    { color: #7b5c3e; border-bottom-color: #7b5c3e; }
+.cat-nav-link.seafood:hover, .cat-nav-link.seafood.active { color: #1a6fa0; border-bottom-color: #1a6fa0; }
+.cat-nav-link .icon { font-size: 1.1rem; }
+
+/* -- Category Sections -- */
+.meat-category-section {
+    padding: 60px 0 20px;
+}
+.meat-category-section + .meat-category-section {
+    border-top: 3px solid #f0f0f0;
+}
+
+/* Category headers with accent stripe */
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 36px;
+}
+.category-accent {
+    width: 6px;
+    height: 52px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+.category-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+.category-title-main {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+}
+.category-count {
+    margin-left: auto;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: #aaa;
+    letter-spacing: 0.06em;
+}
+
+/* Per-category color theming */
+#chicken .category-accent  { background: #c0392b; }
+#chicken .category-label   { color: #c0392b; }
+#chicken .category-title-main { color: #2c1a17; }
+
+#pork .category-accent     { background: #e67e22; }
+#pork .category-label      { color: #e67e22; }
+#pork .category-title-main { color: #2c1f10; }
+
+#beef .category-accent     { background: #7b5c3e; }
+#beef .category-label      { color: #7b5c3e; }
+#beef .category-title-main { color: #2c1f10; }
+
+#seafood .category-accent  { background: #1a6fa0; }
+#seafood .category-label   { color: #1a6fa0; }
+#seafood .category-title-main { color: #0d1e2a; }
+
+/* Divider line after header */
+.category-divider {
+    border: none;
+    height: 1.5px;
+    margin-bottom: 36px;
+    opacity: 0.18;
+}
+#chicken .category-divider { background: #c0392b; }
+#pork    .category-divider { background: #e67e22; }
+#beef    .category-divider { background: #7b5c3e; }
+#seafood .category-divider { background: #1a6fa0; }

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meats — Culinary Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="nav-container">
+            <a href="index.html" class="nav-logo">Culinary Journal</a>
+            <ul class="nav-links">
+                <li><a href="index.html"       class="nav-link">Home</a></li>
+                <li><a href="meats.html"        class="nav-link">Meats</a></li>
+                <li><a href="veggies.html"      class="nav-link">Veggies</a></li>
+                <li><a href="desserts.html"     class="nav-link">Desserts</a></li>
+                <li><a href="beverages.html"    class="nav-link">Beverages</a></li>
+                <li><a href="appetizers.html"   class="nav-link">Appetizers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero2" id="hero2">
+        <div class="hero-overlay"></div>
+        <div class="hero-content2">
+            <div class="hero-title-box">
+                <h1 class="hero-title">Meat<br>Section</h1>
+            </div>
+            <a href="#chicken" class="hero-btn">Explore Recipes</a>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         STICKY CATEGORY NAVIGATION
+         ══════════════════════════════════════════ -->
+    <nav class="category-nav" aria-label="Meat categories">
+        <a href="#chicken" class="cat-nav-link chicken"><span class="icon">🍗</span> Chicken</a>
+        <a href="#pork"    class="cat-nav-link pork"   ><span class="icon">🥩</span> Pork</a>
+        <a href="#beef"    class="cat-nav-link beef"   ><span class="icon">🥩</span> Beef</a>
+        <a href="#seafood" class="cat-nav-link seafood"><span class="icon">🦐</span> Seafood</a>
+    </nav>
+
+
+    <!-- ══════════════════════════════════════════
+         SECTION 1: CHICKEN
+         ══════════════════════════════════════════ -->
+    <section class="meat-category-section" id="chicken">
+        <div class="section-container">
+            <div class="category-header">
+                <div class="category-accent"></div>
+                <div>
+                    <p class="category-label">Category</p>
+                    <h2 class="category-title-main">Chicken</h2>
+                </div>
+                <span class="category-count">3 recipes</span>
+            </div>
+            <hr class="category-divider">
+
+            <div class="recipes-grid">
+
+                <!-- CARD 1: Chicken Adobo -->
+                <article class="recipe-card">
+                    <img src="adoboy.jpg" alt="Chicken Adobo" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">Chicken Adobo</h3>
+                        <p class="card-description">The quintessential Filipino dish — braised in a tangy, savory blend of vinegar, soy sauce, garlic, and bay leaves until fall-off-the-bone tender.</p>
+                        <div class="card-details">
+                            <span class="detail-item"><span class="detail-label">Prep</span><span class="detail-value">15 min</span></span>
+                            <span class="detail-item"><span class="detail-label">Cook</span><span class="detail-value">45 min</span></span>
+                            <span class="detail-item"><span class="detail-label">Difficulty</span><span class="detail-value">Easy</span></span>
+                            
+                            <span class="detail-item"><span class="detail-label">Estimated Cost</span><span class="detail-value">??????</span></span>
+                        </div>
+                        <h4 class="list-heading">Ingredients</h4>
+                        <ul class="ingredient-list">
+                            <li>onions</li>
+                            <li>garlic</li>
+                            <li>chicken</li>
+                            <li>salt</li>
+                            <li>ground black pepper</li>
+                            <li>soy sauce</li>
+                            <li>hot water</li>
+                            <li>dried laurel leaves</li>
+                            <li>whole black peppercorn</li>
+                            <li>cooking oil</li>
+                            <li>vinegar</li>
+                        </ul>
+                        <h4 class="list-heading">Steps</h4>
+                        <ol class="steps-list">
+                            <li>Sauté onions and garlic on high heat</li>
+                            <li>Add chicken, season, and cook until fat renders</li>
+                            <li>Add soy sauce and reduce on high heat</li>
+                            <li>Pour in hot water, add laurel leaves and peppercorn, then simmer</li>
+                            <li>Separate chicken and pan-fry in oil</li>
+                            <li>Return sauce, add vinegar and a bit of water</li>
+                            <li>Simmer and reduce sauce until desired consistency</li>
+                        </ol>
+                        <h4 class="list-heading">Video Tutorial</h4>
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/results?A=adobong+manok+recipe%5C" allowfullscreen title="Chicken Adobo Tutorial"></iframe>
+                        </div>
+                        <div class="recipe-actions">
+                            <button onclick="printRecipe(this)" class="print-btn">🖨 Print Recipe</button>
+                            <button onclick="downloadPDF(this)" class="pdf-btn">⬇ Download PDF</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 3: Chicken Inasal -->
+                <article class="recipe-card">
+                    <img src="your-chicken-inasal.jpg" alt="Chicken Inasal" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">Chicken Inasal</h3>
+                        <p class="card-description">Bacolod's famous grilled chicken marinated in a flavorful blend of calamansi, vinegar, and annatto — served with garlic rice and the signature chicken oil.</p>
+                        <div class="card-details">
+                            <span class="detail-item"><span class="detail-label">Prep</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Cook</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Difficulty</span><span class="detail-value"><!-- ADD --></span></span>
+                            
+                            <span class="detail-item"><span class="detail-label">Estimated Cost</span><span class="detail-value">??????</span></span>
+                        </div>
+                        <h4 class="list-heading">Ingredients</h4>
+                        <ul class="ingredient-list">
+                            <li class="placeholder-text">Ingredients to be added</li>
+                        </ul>
+                        <h4 class="list-heading">Steps</h4>
+                        <ol class="steps-list">
+                            <li class="placeholder-text">Steps to be added</li>
+                        </ol>
+                        <h4 class="list-heading">Video Tutorial</h4>
+                        <div class="video-placeholder">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            YouTube tutorial coming soon
+                        </div>
+                        <div class="recipe-actions">
+                            <button onclick="printRecipe(this)" class="print-btn">🖨 Print Recipe</button>
+                            <button onclick="downloadPDF(this)" class="pdf-btn">⬇ Download PDF</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 10: Chicken Tinola -->
+                <article class="recipe-card">
+                    <img src="your-tinola.jpg" alt="Chicken Tinola" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">Chicken Tinola</h3>
+                        <p class="card-description">A light and nourishing ginger-based chicken soup with green papaya and chili leaves — the go-to Filipino soup when you need comfort or warmth.</p>
+                        <div class="card-details">
+                            <span class="detail-item"><span class="detail-label">Prep</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Cook</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Difficulty</span><span class="detail-value"><!-- ADD --></span></span>
+                            
+                            <span class="detail-item"><span class="detail-label">Estimated Cost</span><span class="detail-value">??????</span></span>
+                        </div>
+                        <h4 class="list-heading">Ingredients</h4>
+                        <ul class="ingredient-list"><li class="placeholder-text">Ingredients to be added</li></ul>
+                        <h4 class="list-heading">Steps</h4>
+                        <ol class="steps-list"><li class="placeholder-text">Steps to be added</li></ol>
+                        <h4 class="list-heading">Video Tutorial</h4>
+                        <div class="video-placeholder">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            YouTube tutorial coming soon
+                        </div>
+                        <div class="recipe-actions">
+                            <button onclick="printRecipe(this)" class="print-btn">🖨 Print Recipe</button>
+                            <button onclick="downloadPDF(this)" class="pdf-btn">⬇ Download PDF</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div><!-- /recipes-grid -->
+        </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════
+         SECTION 2: PORK
+         ══════════════════════════════════════════ -->
+    <section class="meat-category-section" id="pork">
+        <div class="section-container">
+            <div class="category-header">
+                <div class="category-accent"></div>
+                <div>
+                    <p class="category-label">Category</p>
+                    <h2 class="category-title-main">Pork</h2>
+                </div>
+                <span class="category-count">3 recipes</span>
+            </div>
+            <hr class="category-divider">
+
+            <div class="recipes-grid">
+
+                <!-- CARD 2: Pork Barbecue -->
+                <article class="recipe-card">
+                    <img src="barbikyo.jpg" alt="Pork Barbecue" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">Pork Barbecue</h3>
+                        <p class="card-description">Skewered pork marinated in a sweet-savory blend and grilled over charcoal — a beloved street food staple at every Filipino gathering and fiesta.</p>
+                        <div class="card-details">
+                            <span class="detail-item"><span class="detail-label">Prep</span><span class="detail-value">20 min</span></span>
+                            <span class="detail-item"><span class="detail-label">Cook</span><span class="detail-value">20 min</span></span>
+                            <span class="detail-item"><span class="detail-label">Difficulty</span><span class="detail-value">Easy</span></span>
+                            
+                            <span class="detail-item"><span class="detail-label">Estimated Cost</span><span class="detail-value">??????</span></span>
+                        </div>
+                        <h4 class="list-heading">Ingredients</h4>
+                        <ul class="ingredient-list">
+                            <li>1 kg pork shoulder, thinly sliced</li>
+                            <li>½ cup banana ketchup</li>
+                            <li>¼ cup soy sauce</li>
+                            <li>¼ cup calamansi juice</li>
+                            <li>3 tbsp brown sugar</li>
+                            <li>4 cloves garlic, minced</li>
+                            <li>1 tsp black pepper</li>
+                            <li>1 tsp salt</li>
+                            <li>Bamboo skewers, soaked in water</li>
+                        </ul>
+                        <h4 class="list-heading">Steps</h4>
+                        <ol class="steps-list">
+                            <li>Mix ketchup, soy sauce, calamansi juice, brown sugar, garlic, pepper, and salt in a large bowl.</li>
+                            <li>Add pork slices and toss to coat thoroughly. Cover and refrigerate for at least 4 hours.</li>
+                            <li>Thread marinated pork onto soaked bamboo skewers, folding each slice accordion-style.</li>
+                            <li>Preheat grill or charcoal to medium-high heat.</li>
+                            <li>Grill skewers for 3–4 minutes per side, basting with reserved marinade each flip.</li>
+                            <li>Cook until pork is slightly charred and fully cooked. Serve with garlic rice and banana ketchup.</li>
+                        </ol>
+                        <h4 class="list-heading">Video Tutorial</h4>
+                        <div class="video-placeholder">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            YouTube tutorial coming soon
+                        </div>
+                        <div class="recipe-actions">
+                            <button onclick="printRecipe(this)" class="print-btn">🖨 Print Recipe</button>
+                            <button onclick="downloadPDF(this)" class="pdf-btn">⬇ Download PDF</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 5: Lechon Kawali -->
+                <article class="recipe-card">
+                    <img src="your-lechon-kawali.jpg" alt="Lechon Kawali" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">Lechon Kawali</h3>
+                        <p class="card-description">Deep-fried pork belly with an irresistibly crispy skin and tender, juicy meat inside — best enjoyed with liver sauce or vinegar dip.</p>
+                        <div class="card-details">
+                            <span class="detail-item"><span class="detail-label">Prep</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Cook</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Difficulty</span><span class="detail-value"><!-- ADD --></span></span>
+                            
+                            <span class="detail-item"><span class="detail-label">Estimated Cost</span><span class="detail-value">??????</span></span>
+                        </div>
+                        <h4 class="list-heading">Ingredients</h4>
+                        <ul class="ingredient-list"><li class="placeholder-text">Ingredients to be added</li></ul>
+                        <h4 class="list-heading">Steps</h4>
+                        <ol class="steps-list"><li class="placeholder-text">Steps to be added</li></ol>
+                        <h4 class="list-heading">Video Tutorial</h4>
+                        <div class="video-placeholder">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            YouTube tutorial coming soon
+                        </div>
+                        <div class="recipe-actions">
+                            <button onclick="printRecipe(this)" class="print-btn">🖨 Print Recipe</button>
+                            <button onclick="downloadPDF(this)" class="pdf-btn">⬇ Download PDF</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 7: Pork Sinigang -->
+                <article class="recipe-card">
+                    <img src="your-pork-sinigang.jpg" alt="Pork Sinigang" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">Pork Sinigang</h3>
+                        <p class="card-description">Tender pork ribs slow-cooked in a tangy tamarind broth with eggplant, kangkong, and radish — the ultimate Filipino sour soup.</p>
+                        <div class="card-details">
+                            <span class="detail-item"><span class="detail-label">Prep</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Cook</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Difficulty</span><span class="detail-value"><!-- ADD --></span></span>
+                            
+                            <span class="detail-item"><span class="detail-label">Estimated Cost</span><span class="detail-value">??????</span></span>
+                        </div>
+                        <h4 class="list-heading">Ingredients</h4>
+                        <ul class="ingredient-list"><li class="placeholder-text">Ingredients to be added</li></ul>
+                        <h4 class="list-heading">Steps</h4>
+                        <ol class="steps-list"><li class="placeholder-text">Steps to be added</li></ol>
+                        <h4 class="list-heading">Video Tutorial</h4>
+                        <div class="video-placeholder">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            YouTube tutorial coming soon
+                        </div>
+                        <div class="recipe-actions">
+                            <button onclick="printRecipe(this)" class="print-btn">🖨 Print Recipe</button>
+                            <button onclick="downloadPDF(this)" class="pdf-btn">⬇ Download PDF</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div><!-- /recipes-grid -->
+        </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════
+         SECTION 3: BEEF
+         ══════════════════════════════════════════ -->
+    <section class="meat-category-section" id="beef">
+        <div class="section-container">
+            <div class="category-header">
+                <div class="category-accent"></div>
+                <div>
+                    <p class="category-label">Category</p>
+                    <h2 class="category-title-main">Beef</h2>
+                </div>
+                <span class="category-count">2 recipes</span>
+            </div>
+            <hr class="category-divider">
+
+            <div class="recipes-grid">
+
+                <!-- CARD 4: Beef Caldereta -->
+                <article class="recipe-card">
+                    <img src="your-caldereta.jpg" alt="Beef Caldereta" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">Beef Caldereta</h3>
+                        <p class="card-description">A rich and hearty Filipino beef stew cooked in tomato sauce with liver spread, olives, and bell peppers — a festive classic for special occasions.</p>
+                        <div class="card-details">
+                            <span class="detail-item"><span class="detail-label">Prep</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Cook</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Difficulty</span><span class="detail-value"><!-- ADD --></span></span>
+                            
+                            <span class="detail-item"><span class="detail-label">Estimated Cost</span><span class="detail-value">??????</span></span>
+                        </div>
+                        <h4 class="list-heading">Ingredients</h4>
+                        <ul class="ingredient-list"><li class="placeholder-text">Ingredients to be added</li></ul>
+                        <h4 class="list-heading">Steps</h4>
+                        <ol class="steps-list"><li class="placeholder-text">Steps to be added</li></ol>
+                        <h4 class="list-heading">Video Tutorial</h4>
+                        <div class="video-placeholder">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            YouTube tutorial coming soon
+                        </div>
+                        <div class="recipe-actions">
+                            <button onclick="printRecipe(this)" class="print-btn">🖨 Print Recipe</button>
+                            <button onclick="downloadPDF(this)" class="pdf-btn">⬇ Download PDF</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 9: Beef Tapa -->
+                <article class="recipe-card">
+                    <img src="your-beef-tapa.jpg" alt="Beef Tapa" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">Beef Tapa</h3>
+                        <p class="card-description">Cured and pan-fried beef slices with a sweet-savory glaze — a Filipino breakfast staple best served in the classic tapsilog combination.</p>
+                        <div class="card-details">
+                            <span class="detail-item"><span class="detail-label">Prep</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Cook</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Difficulty</span><span class="detail-value"><!-- ADD --></span></span>
+                            
+                            <span class="detail-item"><span class="detail-label">Estimated Cost</span><span class="detail-value">??????</span></span>
+                        </div>
+                        <h4 class="list-heading">Ingredients</h4>
+                        <ul class="ingredient-list"><li class="placeholder-text">Ingredients to be added</li></ul>
+                        <h4 class="list-heading">Steps</h4>
+                        <ol class="steps-list"><li class="placeholder-text">Steps to be added</li></ol>
+                        <h4 class="list-heading">Video Tutorial</h4>
+                        <div class="video-placeholder">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            YouTube tutorial coming soon
+                        </div>
+                        <div class="recipe-actions">
+                            <button onclick="printRecipe(this)" class="print-btn">🖨 Print Recipe</button>
+                            <button onclick="downloadPDF(this)" class="pdf-btn">⬇ Download PDF</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div><!-- /recipes-grid -->
+        </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════
+         SECTION 4: SEAFOOD
+         ══════════════════════════════════════════ -->
+    <section class="meat-category-section" id="seafood">
+        <div class="section-container">
+            <div class="category-header">
+                <div class="category-accent"></div>
+                <div>
+                    <p class="category-label">Category</p>
+                    <h2 class="category-title-main">Seafood</h2>
+                </div>
+                <span class="category-count">2 recipes</span>
+            </div>
+            <hr class="category-divider">
+
+            <div class="recipes-grid">
+
+                <!-- CARD 6: Sinigang na Hipon -->
+                <article class="recipe-card">
+                    <img src="your-sinigang-hipon.jpg" alt="Sinigang na Hipon" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">Sinigang na Hipon</h3>
+                        <p class="card-description">A sour tamarind-based soup with plump shrimp and fresh vegetables — one of the most beloved comfort soups in Filipino homes.</p>
+                        <div class="card-details">
+                            <span class="detail-item"><span class="detail-label">Prep</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Cook</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Difficulty</span><span class="detail-value"><!-- ADD --></span></span>
+                            
+                            <span class="detail-item"><span class="detail-label">Estimated Cost</span><span class="detail-value">??????</span></span>
+                        </div>
+                        <h4 class="list-heading">Ingredients</h4>
+                        <ul class="ingredient-list"><li class="placeholder-text">Ingredients to be added</li></ul>
+                        <h4 class="list-heading">Steps</h4>
+                        <ol class="steps-list"><li class="placeholder-text">Steps to be added</li></ol>
+                        <h4 class="list-heading">Video Tutorial</h4>
+                        <div class="video-placeholder">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            YouTube tutorial coming soon
+                        </div>
+                        <div class="recipe-actions">
+                            <button onclick="printRecipe(this)" class="print-btn">🖨 Print Recipe</button>
+                            <button onclick="downloadPDF(this)" class="pdf-btn">⬇ Download PDF</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 8: Inihaw na Bangus -->
+                <article class="recipe-card">
+                    <img src="your-bangus.jpg" alt="Inihaw na Bangus" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">Inihaw na Bangus</h3>
+                        <p class="card-description">Grilled milkfish stuffed with tomatoes, onions, and ginger — a simple yet incredibly flavorful Filipino grilled fish dish.</p>
+                        <div class="card-details">
+                            <span class="detail-item"><span class="detail-label">Prep</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Cook</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Difficulty</span><span class="detail-value"><!-- ADD --></span></span>
+                            
+                            <span class="detail-item"><span class="detail-label">Estimated Cost</span><span class="detail-value">??????</span></span>
+                        </div>
+                        <h4 class="list-heading">Ingredients</h4>
+                        <ul class="ingredient-list"><li class="placeholder-text">Ingredients to be added</li></ul>
+                        <h4 class="list-heading">Steps</h4>
+                        <ol class="steps-list"><li class="placeholder-text">Steps to be added</li></ol>
+                        <h4 class="list-heading">Video Tutorial</h4>
+                        <div class="video-placeholder">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            YouTube tutorial coming soon
+                        </div>
+                        <div class="recipe-actions">
+                            <button onclick="printRecipe(this)" class="print-btn">🖨 Print Recipe</button>
+                            <button onclick="downloadPDF(this)" class="pdf-btn">⬇ Download PDF</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div><!-- /recipes-grid -->
+        </div>
+    </section>
+
+
+    <footer class="site-footer">
+        <p class="footer-text">&copy; 2026 Culinary Journal | Filipino Cuisine</p>
+    </footer>
+
+    <script src="recipe-utils.js"></script>
+
+    <script>
+        /* ── Active highlight on category nav as user scrolls ── */
+        const sections = document.querySelectorAll('.meat-category-section');
+        const navLinks = document.querySelectorAll('.cat-nav-link');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    const id = entry.target.id;
+                    const active = document.querySelector(`.cat-nav-link.${id}`);
+                    if (active) active.classList.add('active');
+                }
+            });
+        }, { threshold: 0.3 });
+
+        sections.forEach(s => observer.observe(s));
+    </script>
+
+</body>
+</html>

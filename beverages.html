@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beverages — Culinary Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero2 { background-image: url('your-beverages-hero.jpg'); }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="nav-container">
+            <a href="index.html" class="nav-logo">Culinary Journal</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="meats.html" class="nav-link">Meats</a></li>
+                <li><a href="veggies.html" class="nav-link">Veggies</a></li>
+                <li><a href="desserts.html" class="nav-link">Desserts</a></li>
+                <li><a href="beverages.html" class="nav-link">Beverages</a></li>
+                <li><a href="appetizers.html" class="nav-link">Appetizers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero2" id="hero2">
+        <div class="hero-overlay"></div>
+        <div class="hero-content2">
+            <div class="hero-title-box">
+                <h1 class="hero-title">Beverages</h1>
+            </div>
+            <a href="#recipes" class="hero-btn">Explore Drinks</a>
+        </div>
+    </section>
+
+    <section class="recipes-section" id="recipes">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">drinks</h2>
+                <p class="section-tagline">be proud be loud</p>
+            </div>
+
+            <div class="recipes-grid">
+
+                <!-- CARD 1: Sago't Gulaman -->
+                <article class="recipe-card">
+                    <img src="your-sagogulaman.jpg" alt="Sago't Gulaman" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">Sago't Gulaman</h3>
+                        <p class="card-description">A classic Filipino cold drink with tapioca pearls and cubes of grass jelly in a sweet brown sugar syrup — refreshing and beloved at every Filipino occasion.</p>
+                        <div class="card-details">
+                            <span class="detail-item"><span class="detail-label">Prep</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Cook</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Difficulty</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Estimated Cost</span><span class="detail-value">??????</span></span>
+
+                        </div>
+                        <h4 class="list-heading">Ingredients</h4>
+                        <ul class="ingredient-list"><li class="placeholder-text">Ingredients to be added</li></ul>
+                        <h4 class="list-heading">Steps</h4>
+                        <ol class="steps-list"><li class="placeholder-text">Steps to be added</li></ol>
+                        <h4 class="list-heading">Video Tutorial</h4>
+                        <div class="video-placeholder">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            YouTube tutorial coming soon
+                        </div>
+                        <div class="recipe-actions">
+                            <button onclick="printRecipe(this)" class="print-btn">🖨 Print Recipe</button>
+                            <button onclick="downloadPDF(this)" class="pdf-btn">⬇ Download PDF</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 2: Buko Juice -->
+                <article class="recipe-card">
+                    <img src="your-bukojuice.jpg" alt="Buko Juice" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">Buko Juice</h3>
+                        <p class="card-description">Fresh young coconut water served chilled with tender coconut meat strips — the most natural and hydrating Filipino drink straight from the tropical source.</p>
+                        <div class="card-details">
+                            <span class="detail-item"><span class="detail-label">Prep</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Cook</span><span class="detail-value">None</span></span>
+                            <span class="detail-item"><span class="detail-label">Difficulty</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Estimated Cost</span><span class="detail-value">??????</span></span>
+                        </div>
+                        <h4 class="list-heading">Ingredients</h4>
+                        <ul class="ingredient-list"><li class="placeholder-text">Ingredients to be added</li></ul>
+                        <h4 class="list-heading">Steps</h4>
+                        <ol class="steps-list"><li class="placeholder-text">Steps to be added</li></ol>
+                        <h4 class="list-heading">Video Tutorial</h4>
+                        <div class="video-placeholder">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            YouTube tutorial coming soon
+                        </div>
+                        <div class="recipe-actions">
+                            <button onclick="printRecipe(this)" class="print-btn">🖨 Print Recipe</button>
+                            <button onclick="downloadPDF(this)" class="pdf-btn">⬇ Download PDF</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 3: Calamansi Juice -->
+                <article class="recipe-card">
+                    <img src="your-calamansi.jpg" alt="Calamansi Juice" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">Calamansi Juice</h3>
+                        <p class="card-description">Fresh-squeezed Filipino citrus juice sweetened with sugar and served over ice — tangy, bright, and the go-to thirst quencher under the tropical sun.</p>
+                        <div class="card-details">
+                            <span class="detail-item"><span class="detail-label">Prep</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Cook</span><span class="detail-value">None</span></span>
+                            <span class="detail-item"><span class="detail-label">Difficulty</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Estimated Cost</span><span class="detail-value">??????</span></span>
+                        </div>
+                        <h4 class="list-heading">Ingredients</h4>
+                        <ul class="ingredient-list"><li class="placeholder-text">Ingredients to be added</li></ul>
+                        <h4 class="list-heading">Steps</h4>
+                        <ol class="steps-list"><li class="placeholder-text">Steps to be added</li></ol>
+                        <h4 class="list-heading">Video Tutorial</h4>
+                        <div class="video-placeholder">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            YouTube tutorial coming soon
+                        </div>
+                        <div class="recipe-actions">
+                            <button onclick="printRecipe(this)" class="print-btn">🖨 Print Recipe</button>
+                            <button onclick="downloadPDF(this)" class="pdf-btn">⬇ Download PDF</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 4: Salabat -->
+                <article class="recipe-card">
+                    <img src="your-salabat.jpg" alt="Salabat" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">Salabat</h3>
+                        <p class="card-description">A warm and soothing Filipino ginger tea sweetened with brown sugar — the classic home remedy for colds, sore throats, and cold rainy days.</p>
+                        <div class="card-details">
+                            <span class="detail-item"><span class="detail-label">Prep</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Cook</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Difficulty</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Estimated Cost</span><span class="detail-value">??????</span></span>
+                        </div>
+                        <h4 class="list-heading">Ingredients</h4>
+                        <ul class="ingredient-list"><li class="placeholder-text">Ingredients to be added</li></ul>
+                        <h4 class="list-heading">Steps</h4>
+                        <ol class="steps-list"><li class="placeholder-text">Steps to be added</li></ol>
+                        <h4 class="list-heading">Video Tutorial</h4>
+                        <div class="video-placeholder">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            YouTube tutorial coming soon
+                        </div>
+                        <div class="recipe-actions">
+                            <button onclick="printRecipe(this)" class="print-btn">🖨 Print Recipe</button>
+                            <button onclick="downloadPDF(this)" class="pdf-btn">⬇ Download PDF</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 5: Avocado Shake -->
+                <article class="recipe-card">
+                    <img src="your-avocado-shake.jpg" alt="Avocado Shake" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">Avocado Shake</h3>
+                        <p class="card-description">Creamy blended avocado with evaporated milk and sugar — a thick, rich Filipino shake that is sweeter and creamier than any version you've had before.</p>
+                        <div class="card-details">
+                            <span class="detail-item"><span class="detail-label">Prep</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Cook</span><span class="detail-value">None</span></span>
+                            <span class="detail-item"><span class="detail-label">Difficulty</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Estimated Cost</span><span class="detail-value">??????</span></span>
+                        </div>
+                        <h4 class="list-heading">Ingredients</h4>
+                        <ul class="ingredient-list"><li class="placeholder-text">Ingredients to be added</li></ul>
+                        <h4 class="list-heading">Steps</h4>
+                        <ol class="steps-list"><li class="placeholder-text">Steps to be added</li></ol>
+                        <h4 class="list-heading">Video Tutorial</h4>
+                        <div class="video-placeholder">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            YouTube tutorial coming soon
+                        </div>
+                        <div class="recipe-actions">
+                            <button onclick="printRecipe(this)" class="print-btn">🖨 Print Recipe</button>
+                            <button onclick="downloadPDF(this)" class="pdf-btn">⬇ Download PDF</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 6: Mango Shake -->
+                <article class="recipe-card">
+                    <img src="your-mango-shake.jpg" alt="Mango Shake" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">Mango Shake</h3>
+                        <p class="card-description">Blended fresh Philippine mangoes with ice and milk — tropical, sweet, and bursting with the flavor of the world's best mango variety.</p>
+                        <div class="card-details">
+                            <span class="detail-item"><span class="detail-label">Prep</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Cook</span><span class="detail-value">None</span></span>
+                            <span class="detail-item"><span class="detail-label">Difficulty</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Estimated Cost</span><span class="detail-value">??????</span></span>
+                        </div>
+                        <h4 class="list-heading">Ingredients</h4>
+                        <ul class="ingredient-list"><li class="placeholder-text">Ingredients to be added</li></ul>
+                        <h4 class="list-heading">Steps</h4>
+                        <ol class="steps-list"><li class="placeholder-text">Steps to be added</li></ol>
+                        <h4 class="list-heading">Video Tutorial</h4>
+                        <div class="video-placeholder">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            YouTube tutorial coming soon
+                        </div>
+                        <div class="recipe-actions">
+                            <button onclick="printRecipe(this)" class="print-btn">🖨 Print Recipe</button>
+                            <button onclick="downloadPDF(this)" class="pdf-btn">⬇ Download PDF</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 7: Pineapple Juice -->
+                <article class="recipe-card">
+                    <img src="your-pineapple-juice.jpg" alt="Pineapple Juice" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">Pineapple Juice</h3>
+                        <p class="card-description">Freshly squeezed or blended Philippine pineapple juice — sweet, tart, and absolutely refreshing, especially when served ice-cold at fiestas.</p>
+                        <div class="card-details">
+                            <span class="detail-item"><span class="detail-label">Prep</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Cook</span><span class="detail-value">None</span></span>
+                            <span class="detail-item"><span class="detail-label">Difficulty</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Estimated Cost</span><span class="detail-value">??????</span></span>
+                        </div>
+                        <h4 class="list-heading">Ingredients</h4>
+                        <ul class="ingredient-list"><li class="placeholder-text">Ingredients to be added</li></ul>
+                        <h4 class="list-heading">Steps</h4>
+                        <ol class="steps-list"><li class="placeholder-text">Steps to be added</li></ol>
+                        <h4 class="list-heading">Video Tutorial</h4>
+                        <div class="video-placeholder">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            YouTube tutorial coming soon
+                        </div>
+                        <div class="recipe-actions">
+                            <button onclick="printRecipe(this)" class="print-btn">🖨 Print Recipe</button>
+                            <button onclick="downloadPDF(this)" class="pdf-btn">⬇ Download PDF</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 8: Melon Juice -->
+                <article class="recipe-card">
+                    <img src="your-melon-juice.jpg" alt="Melon Juice" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">Melon Juice</h3>
+                        <p class="card-description">Freshly blended cantaloupe melon with milk and sugar — a light, sweet, and subtly fragrant Filipino juice that tastes like a tropical afternoon.</p>
+                        <div class="card-details">
+                            <span class="detail-item"><span class="detail-label">Prep</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Cook</span><span class="detail-value">None</span></span>
+                            <span class="detail-item"><span class="detail-label">Difficulty</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Estimated Cost</span><span class="detail-value">??????</span></span>
+                        </div>
+                        <h4 class="list-heading">Ingredients</h4>
+                        <ul class="ingredient-list"><li class="placeholder-text">Ingredients to be added</li></ul>
+                        <h4 class="list-heading">Steps</h4>
+                        <ol class="steps-list"><li class="placeholder-text">Steps to be added</li></ol>
+                        <h4 class="list-heading">Video Tutorial</h4>
+                        <div class="video-placeholder">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            YouTube tutorial coming soon
+                        </div>
+                        <div class="recipe-actions">
+                            <button onclick="printRecipe(this)" class="print-btn">🖨 Print Recipe</button>
+                            <button onclick="downloadPDF(this)" class="pdf-btn">⬇ Download PDF</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 9: Buko Pandan Drink -->
+                <article class="recipe-card">
+                    <img src="your-buko-pandan-drink.jpg" alt="Buko Pandan Drink" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">Buko Pandan Drink</h3>
+                        <p class="card-description">A chilled drink version of the classic buko pandan — coconut water with young coconut strips and pandan jelly, lightly sweetened and utterly refreshing.</p>
+                        <div class="card-details">
+                            <span class="detail-item"><span class="detail-label">Prep</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Cook</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Difficulty</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Estimated Cost</span><span class="detail-value">??????</span></span>
+                        </div>
+                        <h4 class="list-heading">Ingredients</h4>
+                        <ul class="ingredient-list"><li class="placeholder-text">Ingredients to be added</li></ul>
+                        <h4 class="list-heading">Steps</h4>
+                        <ol class="steps-list"><li class="placeholder-text">Steps to be added</li></ol>
+                        <h4 class="list-heading">Video Tutorial</h4>
+                        <div class="video-placeholder">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            YouTube tutorial coming soon
+                        </div>
+                        <div class="recipe-actions">
+                            <button onclick="printRecipe(this)" class="print-btn">🖨 Print Recipe</button>
+                            <button onclick="downloadPDF(this)" class="pdf-btn">⬇ Download PDF</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 10: Iced Milo -->
+                <article class="recipe-card">
+                    <img src="your-iced-milo.jpg" alt="Iced Milo" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">Iced Milo</h3>
+                        <p class="card-description">Cold chocolate malt drink made with Milo powder, chilled milk, and ice — a Filipino household staple that's been a childhood favorite for generations.</p>
+                        <div class="card-details">
+                            <span class="detail-item"><span class="detail-label">Prep</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Cook</span><span class="detail-value">None</span></span>
+                            <span class="detail-item"><span class="detail-label">Difficulty</span><span class="detail-value"><!-- ADD --></span></span>
+                            <span class="detail-item"><span class="detail-label">Estimated Cost</span><span class="detail-value">??????</span></span>
+                        </div>
+                        <h4 class="list-heading">Ingredients</h4>
+                        <ul class="ingredient-list"><li class="placeholder-text">Ingredients to be added</li></ul>
+                        <h4 class="list-heading">Steps</h4>
+                        <ol class="steps-list"><li class="placeholder-text">Steps to be added</li></ol>
+                        <h4 class="list-heading">Video Tutorial</h4>
+                        <div class="video-placeholder">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            YouTube tutorial coming soon
+                        </div>
+                        <div class="recipe-actions">
+                            <button onclick="printRecipe(this)" class="print-btn">🖨 Print Recipe</button>
+                            <button onclick="downloadPDF(this)" class="pdf-btn">⬇ Download PDF</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <p class="footer-text">&copy; 2026 Culinary Journal | Filipino Cuisine</p>
+    </footer>
+
+    <script src="recipe-utils.js"></script>
+</body>
+</html>
