@@ -667,14 +667,7 @@ img {
 
 /* ── YOUTUBE EMBED ────────────────────────────────────────── */
 .video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    border-radius: var(--radius-sm);
-    background-color: #000;
-    margin-top: 0.5rem;
-}
+    position: relative;}
 
 .video-wrapper iframe {
     position: absolute;
